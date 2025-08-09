@@ -1,5 +1,5 @@
 --[[
-MS1 REMOTE UTILITY v1.0
+MS1 REMOTE UTILITY v1.1
 What MS1 Remote Utility is & isnt:
 + It prevents remote bans for MS1
 + Puts the remote in the global enviroment, variable name is Remote (can be changed)
