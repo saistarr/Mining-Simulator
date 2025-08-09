@@ -78,3 +78,5 @@ RemoteHook3 = hookmetamethod(game, "__namecall", function(Self, ...)
 	end
 	return RemoteHook3(Self, ...)
 end)
+
+print("Remote Utility loaded successfully!!")
