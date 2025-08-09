@@ -79,4 +79,8 @@ RemoteHook3 = hookmetamethod(game, "__namecall", function(Self, ...)
 	return RemoteHook3(Self, ...)
 end)
 
-print("Remote Utility loaded successfully!!")
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Remote Utilities v1.1\nLoaded!",
+	Text = "\nby Sai<3 (@.sqi.stqr. for help!)",
+	Duration = 3
+})
