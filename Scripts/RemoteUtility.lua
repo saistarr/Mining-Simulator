@@ -26,10 +26,9 @@ if game.PlaceId ~= 1417427737 then
 end
 
 --For security purposes.
-local hookmetamethod = hookmetamethod
 
 --Defining variables
-local Remote, Verified1, Verified2, VerifyHook, RemoteHook1, RemoteHook2, RemoteHook3 = getupvalue(getsenv(game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.ClientScript).displayCurrent,8)["RemoteEvent"]
+local hookmetamethod, Remote, Verified1, Verified2, VerifyHook, RemoteHook1, RemoteHook2, RemoteHook3 = hookmetamethod, getupvalue(getsenv(game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.ClientScript).displayCurrent,8)["RemoteEvent"]
 
 --Making sure the Remote is real (by running if x then it will check if it is nil or not in this case, some executors may fake UNC functions leading this to be nil.)
 if Remote then
@@ -75,7 +74,7 @@ end)
 
 --Anti ban & remote redirection for stuff like remote spy :)
 RemoteHook3 = hookmetamethod(game, "__namecall", function(Self, ...)
-	if getnamecallmethod():lower() == "fireserver" and Self ~= Remote and v ~= Network then
+	if getnamecallmethod():lower() == "fireserver" and Self ~= Remote then
 		if reportRedirects == true then
 			warn("Redirected "..Self.Name.." (fake remote) to the correct remote.")
 		end
