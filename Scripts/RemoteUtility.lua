@@ -44,7 +44,7 @@ VerifyHook = hookmetamethod(game, "__namecall", function(Self, ...)
   	  return VerifyHook(Self, ...)
     end
 end)
-script:Verify()
+game:Verify()
 
 --Checking if verification passed, if not kicking the player so they don't ban themselves xd
 if Verify1 == false or Verify2 == false then
