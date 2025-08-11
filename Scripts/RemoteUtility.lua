@@ -28,7 +28,7 @@ end
 --For security purposes.
 
 --Defining variables
-local hookmetamethod, Remote, Verified1, Verified2, VerifyHook, RemoteHook1, RemoteHook2, RemoteHook3 = hookmetamethod, getupvalue(getsenv(game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.ClientScript).displayCurrent,8)["RemoteEvent"]
+local hookmetamethod, Remote, Verified1, Verified2, VerifyHook, RemoteHook1, RemoteHook2, RemoteHook3 = hookmetamethod, game:GetService("ReplicatedStorage").Network:InvokeServer()
 
 --Making sure the Remote is real (by running if x then it will check if it is nil or not in this case, some executors may fake UNC functions leading this to be nil.)
 if Remote then
