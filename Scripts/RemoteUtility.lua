@@ -35,7 +35,6 @@ local ScriptSettings = {
 --SCRIPT BELOW! DON'T MESS WITH IT IF YOU DON'T KNOW WHAT YOU'RE DOING. ANY ISSUES THAT OCCUR FROM YOU MESSING WITH THIS CODE BELOW IS NOT MY FAULT.
 return function(Settings)
 	for Setting,Value in Settings do
-		print(Setting,Value)
 		if ScriptSettings[Setting] then
 			ScriptSettings[Setting] = Value 
 		end
